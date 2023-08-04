@@ -5,13 +5,13 @@
     margin: 0%;
   }
   .login-form{
-    width: 30%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #556566;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #20d0dd;
     
   }
     h1 {
@@ -24,7 +24,7 @@
       height: 30%; 
       border-radius: 5px;
       border: none;
-      
+
     }
     input[type="submit"] {
     background-color: #000;

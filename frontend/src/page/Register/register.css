@@ -1,3 +1,4 @@
+
 .main-register {
   background:rgb(255, 0, 0) ;
   height: 100vh;
@@ -13,31 +14,31 @@
       }
       input {
       width: 90%;
-      height: 50%;
+      height: 30%;
       padding: 10px;
       margin-bottom: 10px;
       }
 
-      input[type="submit"] {
-      background-color: #000;
-      color: #fff;
-      padding: 1px 20px;
-      margin: 8px 0;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      margin-top: 20px;
-     
-      }
-      .form-group{
-        padding: 0px 50px 0px 50px;
-
-      }
-  .login2{
-    
-    color: white !important;
-  }
-  .login-form2{
-  padding-bottom: 50px;
+   input[type="submit"] {
+   background-color: #000;
+   color: #fff;
+   padding: 1px 20px;
+   margin: 8px 0;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   margin-top: 20px;
   
-  }
+   }
+   .form-group{
+     padding: 0px 50px 0px 50px;
+
+   }
+.login2{
+ 
+ color: white !important;
+}
+.login-form2{
+padding-bottom: 50px;
+
+}
