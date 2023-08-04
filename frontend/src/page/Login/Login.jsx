@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Login() {
   return (
-    <div className="container">
+    <div className="contain">
 
   <div className="login-form">
    <h1>Login</h1>
