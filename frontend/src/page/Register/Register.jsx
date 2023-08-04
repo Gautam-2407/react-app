@@ -9,13 +9,7 @@ function Register() {
         <h2>Registration Form</h2>
         <form>
           <div class="form-group">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="username"
-              required
-            />
+            <input type="text" id="username" name="username" placeholder="username" required />
           </div>
           <div class="form-group">
             <input
