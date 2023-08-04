@@ -1,7 +1,7 @@
-  .contain{
+  .container-login{
    background-color: #37d5e0;
-    width: 200vh;
-    height: 99vh;
+    width: 100vw;
+    height: 100vh;
     margin: 0%;
   }
   .login-form{
