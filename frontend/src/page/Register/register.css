@@ -1,42 +1,42 @@
 
-    .container{
-     background-color: #00000047;
-     margin-top: 250px;
-     margin-left: 950px;
-    
-    }
-  
-      h2{
-      padding: 15px 15px 25px 20px;
-      text-align: center;
-      }
-      input {
-      width: 90%;
-      height: 30%;
-      padding: 10px;
-      margin-bottom: 10px;
-      }
+.container{
+  background-color: #00000047;
+  margin-top: 250px;
+  margin-left: 950px;
+ 
+ }
 
-      input[type="submit"] {
-      background-color: #000;
-      color: #fff;
-      padding: 1px 20px;
-      margin: 8px 0;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      margin-top: 20px;
-     
-      }
-      .form-group{
-        padding: 0px 50px 0px 50px;
+   h2{
+   padding: 15px 15px 25px 20px;
+   text-align: center;
+   }
+   input {
+   width: 90%;
+   height: 30%;
+   padding: 10px;
+   margin-bottom: 10px;
+   }
 
-      }
-  .login2{
-    
-    color: white !important;
-  }
-  .login-form2{
-  padding-bottom: 50px;
+   input[type="submit"] {
+   background-color: #000;
+   color: #fff;
+   padding: 1px 20px;
+   margin: 8px 0;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   margin-top: 20px;
   
-  }
+   }
+   .form-group{
+     padding: 0px 50px 0px 50px;
+
+   }
+.login2{
+ 
+ color: white !important;
+}
+.login-form2{
+padding-bottom: 50px;
+
+}
