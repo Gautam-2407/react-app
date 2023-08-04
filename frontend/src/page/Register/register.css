@@ -1,11 +1,17 @@
 
 .main-register {
-  background:rgb(255, 0, 0) ;
+  background:rgb(24, 234, 241) ;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
     .container-register{
-      display: block;
+      width: 400px;
+      height: 400px;
+      background-image: url(D:\react-app\frontend\src\components\header\images\2.jpg);
+
     }
   
       h2{
@@ -30,15 +36,3 @@
    margin-top: 20px;
   
    }
-   .form-group{
-     padding: 0px 50px 0px 50px;
-
-   }
-.login2{
- 
- color: white !important;
-}
-.login-form2{
-padding-bottom: 50px;
-
-}
