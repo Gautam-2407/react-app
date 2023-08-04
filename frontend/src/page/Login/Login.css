@@ -1,41 +1,30 @@
-body {
- 
-  background-image: url(D:\react-app\frontend\src\components\header\images\2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  .contain{
+   background-color: #37d5e0;
+    width: 200vh;
+    height: 99vh;
+    margin: 0%;
   }
-  .container{
-   background-color: #00000047;
-   margin-top: 250px;
-   margin-left: 950px;
-  
+  .login-form{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #20d0dd;
+    
   }
-
     h1 {
-   
-      padding: 15px 15px 25px 20px;
+      margin: 0px;
+      padding-bottom: 30px;
     text-align: center;
     }
-    input {
-    width: 90%;
-    height: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
-    }
-    .password{
-      margin-left: 180px;
+    input{
+      width: 100%;
+      height: 40px; 
+      border-radius: 5px;
+      border: none;
+      
     }
     input[type="submit"] {
     background-color: #000;
@@ -45,7 +34,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    margin-top: 20px;
+    
    
     }
 .singin{
