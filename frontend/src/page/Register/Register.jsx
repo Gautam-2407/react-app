@@ -7,7 +7,7 @@ function Register() {
     <div className="main-register">
       <div class="container-register">
         <h2>Registration Form</h2>
-        <form>
+        <form className="register-form-wrapper">
           <div class="form-group">
             <input type="text" id="username" name="username" placeholder="username" required />
           </div>
