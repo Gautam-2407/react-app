@@ -27,11 +27,12 @@
     border: none;
       }
 
-   input[type="submit"] {
+   .form-group > input[type="submit"] {
    background-color: #000;
    color: #fff;
-   padding: 1px 20px;
+   padding: 14px 20px;
    margin: 8px 0;
+   font-size: 20px;
    border: none;
    padding: 10px;
    cursor: pointer;
