@@ -7,7 +7,7 @@ function Login() {
     <div className="container-login">
       <div className="login-form">
         <h1>Login</h1>
-        <form>
+        <form className="form-wrapper">
           <input type="text" name="username" placeholder="Username" />
           <input type="password" name="password" placeholder="Password" />
           <div className="password">
