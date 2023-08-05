@@ -42,10 +42,10 @@ function Register() {
             <input type="submit" value="Register" />
           </div>
         </form>
-      </div>
       <div className="login2">
         Already Menber
         <Link to="/">Login</Link>
+      </div>
       </div>
     </div>
   );
