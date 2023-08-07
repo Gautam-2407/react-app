@@ -1,6 +1,4 @@
 const users = require("../models/userSchema");
-
-
             //CHECK PHONE INFORMATION IN DATABASE
             exports.userphone = async (req, res) => {
                   const { username } = req.body;
@@ -9,7 +7,7 @@ const users = require("../models/userSchema");
                         const user = await users.findOne({ username: username });
 
                         if (user) {
-                              res.status(200).json({ exists: true, username: user.username });
+                              res.status(201).json({ exists: true, username: user.username });
 
                         } else {
                               res.status(200).json({ exists: false });

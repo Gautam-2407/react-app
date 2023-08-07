@@ -4,6 +4,6 @@ const controllers = require("../controllers/userController");
 
 //Routes
 // router.post("/user/register", controllers.userregister);
-router.post("/user/userphone", controllers.userphone);
+router.post("/user/phone", controllers.userphone);
 
 module.exports = router;
