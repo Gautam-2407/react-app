@@ -32,8 +32,8 @@ function Register() {
           <div class="form-group">
             <input
               type="password"
-              id="confirm-password"
-              name="confirm-password"
+              id="cpassword"
+              name="cpassword"
               placeholder="confirm-password"
               required
             />
