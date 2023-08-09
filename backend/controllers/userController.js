@@ -1,0 +1,49 @@
+const users = require("../models/userSchema");
+
+exports.userregister = async (req, res) => {
+      const { fname, email, phone } = req.body;
+
+      if (!fname || !email || !phone) {
+            res.status(400).json({ error: "Fill all Fields" });
+      }
+
+      try {
+            const preuser = await users.findOne({ phone: phone });
+
+            if (preuser) {
+                  res.status(400).json({ error: "User already exist" });
+            } else {
+                  const userregister = new users({
+                        fname,
+                        email,
+                        phone,
+                  });
+
+                  const storeData = await userregister.save();
+                  res.status(201).json({ user: userregister });
+            }
+      } catch (error) {
+            res.status(400).json({ error: "Invalid Details", error });
+      }
+};
+
+
+//CHECK PHONE INFORMATION IN DATABASE
+exports.userphone = async (req, res) => {
+      const { username } = req.body;
+
+      try {
+            const user = await users.findOne({ username: username });
+
+            if (user) {
+                  res.status(201).json({ exists: true, username: user.username });
+
+            } else {
+                  res.status(200).json({ exists: false });
+            }
+
+      } catch (error) {
+            console.error("Error while querying MongoDB:", error);
+            res.status(500).json({ error: "Unable to connect with DB" });
+      }
+};

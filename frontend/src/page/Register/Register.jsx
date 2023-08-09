@@ -7,7 +7,7 @@ function Register() {
     <div className="main-register">
       <div class="container-register">
         <h2>Registration Form</h2>
-        <form>
+        <form className="register-form-wrapper">
           <div class="form-group">
             <input type="text" id="username" name="username" placeholder="username" required />
           </div>
@@ -32,8 +32,8 @@ function Register() {
           <div class="form-group">
             <input
               type="password"
-              id="confirm-password"
-              name="confirm-password"
+              id="cpassword"
+              name="cpassword"
               placeholder="confirm-password"
               required
             />
@@ -42,10 +42,10 @@ function Register() {
             <input type="submit" value="Register" />
           </div>
         </form>
-      </div>
       <div className="login2">
         Already Menber
         <Link to="/">Login</Link>
+      </div>
       </div>
     </div>
   );
