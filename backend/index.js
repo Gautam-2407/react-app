@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors= require("cors");
-require("./db/db");
- const router = require("./routes/router");
+require("./db/connection");
+const router = require("./routes/router");
 const PORT = 5000;
 /*Use express.js, mongoose, routers, cors, middleware, */
  
