@@ -1,22 +1,22 @@
 const users = require("../models/userSchema");
 
 exports.userregister = async (req, res) => {
-      const { fname, email, phone } = req.body;
+      const { username, email, password } = req.body;
 
-      if (!fname || !email || !phone) {
+      if (!username || !email || !password) {
             res.status(400).json({ error: "Fill all Fields" });
       }
 
       try {
-            const preuser = await users.findOne({ phone: phone });
+            const preuser = await users.findOne({ email: email });
 
             if (preuser) {
                   res.status(400).json({ error: "User already exist" });
             } else {
                   const userregister = new users({
-                        fname,
+                        username,
                         email,
-                        phone,
+                        password,
                   });
 
                   const storeData = await userregister.save();
