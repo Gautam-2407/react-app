@@ -1,25 +1,49 @@
 import React from "react";
+import { User, Fingerprint } from "lucide-react";
 import "./Login.css";
-import { Link } from "react-router-dom";
 
-function Login() {
+
+const Login = () => {
   return (
-    <div className="container-login">
-      <div className="login-form">
-        <h1>Login</h1>
-        <form className="form-wrapper">
-          <input type="text" name="username" placeholder="Username" />
-          <input type="password" name="password" placeholder="Password" />
-          <div className="password">
-            <Link to="/">Forget Password</Link>
+
+    <div className="container">
+      <span className="centering">
+        <form className="my-form">
+          <span className="login-welcome-row">
+            <h1>Login Form</h1>
+            <h4>Welcome to Login Form</h4>
+          </span>
+          <div className="text-field">
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              // value={phone}
+              // onChange={(e) => setPhone(e.target.value)}
+              placeholder="Enter Your Username"
+              required
+            />
+            <User color="#3574F2" strokeWidth={1.5} />
           </div>
-          <input type="submit" value="Login" />
-          <div className="singin">
-            Not a Member?
-            <Link to="/register">Sign In</Link>
+          <div className="text-field">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              // value={phone}
+              // onChange={(e) => setPhone(e.target.value)}
+              placeholder="Enter Your password"
+              required
+            />
+            <Fingerprint color="#3574F2" strokeWidth={1.5} />
+          </div>
+          <div className="login-button">
+            <input type="submit" value="Login" name="submit" className="my-form__button" />
           </div>
         </form>
-      </div>
+      </span>
     </div>
   );
 }
