@@ -1,12 +1,29 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-
-const postSchema = new mongoose.Schema({
-    username: { type: String, required: true },
-    email: { type: String, required: true },
-    password: { type: String, reqiured: true }
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        trim:true,
+        required: true,
+    },
+    email:{
+        type: String,
+        unique: true,
+        validator(value){
+            if(!validator.isEmail(value)){
+                throw new Error("Not valid Email")
+            }
+        },
+        required: true,
+    },
+    password:{
+        type: String,
+        unique: true,
+        required: true,
+    }
 });
 
-const users = new mongoose.model('users', postSchema);
+//CREATING MODEL
+const users = new mongoose.model("users",userSchema);
 
-module.exports = users; 
+module.exports = users;
