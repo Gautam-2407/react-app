@@ -4,13 +4,9 @@
     --backgroung-white: #fff;
     --shadow-color: #14141423;
 }
-*{
-    margin-left: 10px;
-    margin-top: 15px;
-}
 
 .drawer{
-    height: 90vh;
+    height: 100vh;
     width: 240px;
     border: 2px solid var(--main-color);
     border-radius: 10px;
@@ -23,15 +19,16 @@
 }
 .drawer-menu {
     margin: 0 2rem;
-    height: 70vh;
+    height: 80vh;
 }
 
 .drawer-menu > .drawer-links {
     list-style: none;
+    margin: 1rem 0;
 }
 
 .drawer-menu > .drawer-links > li {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .drawer-links > .text{
@@ -45,6 +42,6 @@
 .drawer-links:last-child{
     position: absolute;
     margin-left:1rem ;
-    bottom: 6rem;
+    bottom: 0rem;
 
 }
