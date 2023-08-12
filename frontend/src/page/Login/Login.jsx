@@ -2,10 +2,12 @@ import React, {useState} from "react";
 import { User, Fingerprint } from "lucide-react";
 import "./Login.css";
 import {phoneValidation} from "../../services/apis"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate= useNavigate ();
 
   const handelclick = async (e) =>{
     e.preventDefault();
@@ -17,9 +19,11 @@ function Login() {
       if (response && response.exists){
         console.log("in for loop");
         console.log(response.username);
+        navigate("/dashboard");
       }
       else{
               console.log("not in for loop");
+              window.location.replace("/");
 
             }
     }

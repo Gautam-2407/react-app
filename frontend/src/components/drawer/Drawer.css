@@ -1,0 +1,48 @@
+:root{
+    --main-color: #3574F2;
+    --background: #f4f7fe;
+    --backgroung-white: #fff;
+}
+*{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.drawer{
+    height: 90vh;
+    width: 240px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.logo-wrapper {
+    margin: 2rem 0;
+    text-align: center;
+}
+.drawer-menu {
+    margin: 0 2rem;
+    height: 70vh;
+}
+
+.drawer-menu > .drawer-links {
+    list-style: none;
+}
+
+.drawer-menu > .drawer-links > li {
+    margin: 1rem 0;
+}
+
+.drawer-links > .text{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    margin-left:1rem ;
+    align-items: center;
+}
+
+.drawer-links:last-child{
+    position: absolute;
+    margin-left:1rem ;
+    bottom: 6rem;
+
+}
