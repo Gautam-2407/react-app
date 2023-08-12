@@ -8,7 +8,7 @@ const Sidebar = () => {
 
         <div className="sidebar-container">
             <div className="top">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo"  classname="logo"/>
             </div>
             <div className="sidebar-menu">
                 {/* Dashboard link Open */}
