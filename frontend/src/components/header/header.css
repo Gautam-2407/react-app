@@ -4,7 +4,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-   background-color: #f4f7fe;
+   background-color: #ffffff;
 }
 
 .header-left{
@@ -20,8 +20,8 @@
 
 .header-user img{
     border-radius:13px;
-    border:1px solid black;
-    height:30px;
+    border:1px solid rgb(0, 0, 0);
+    height:40px;
     margin-left: 70px;
     
 }

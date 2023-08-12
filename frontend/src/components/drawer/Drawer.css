@@ -2,6 +2,7 @@
     --main-color: #3574F2;
     --background: #f4f7fe;
     --backgroung-white: #fff;
+    --shadow-color: #14141423;
 }
 *{
     margin-left: 10px;
@@ -13,6 +14,7 @@
     width: 240px;
     border: 2px solid var(--main-color);
     border-radius: 10px;
+    box-shadow: 15px 10px var(--shadow-color);
 }
 
 .logo-wrapper {
