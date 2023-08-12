@@ -13,6 +13,8 @@ function App() {
         <Route path= '/' Component={Login} />
         <Route path= '/register' Component={Register} />
       </Routes>
+
+    
     </div>
   );
 }
