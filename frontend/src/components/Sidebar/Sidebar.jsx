@@ -4,6 +4,11 @@ import logo from "../assets/images/logo.png";
 import { LayoutDashboard, User, Wallet, LogOut } from "lucide-react";
 import { Link } from 'react-router-dom';
 const Sidebar = () => {
+
+    const handlelogout= () =>{
+        window.location.replace("/");
+    }
+
     return (
 
         <div className="sidebar-container">
@@ -35,7 +40,7 @@ const Sidebar = () => {
                 {/* Logout link is open */}
                 <div className="sidebar-wrapper">
                     <LogOut color="#3574F2" strokeWidth={1.5} />
-                    <Link to={"/logout"} className='page-links' >Logout</Link>
+                    <Link to={""} className='page-links' onClick={handlelogout} >Logout</Link>
                 </div>
                 {/* Logout link is closed */}
 
