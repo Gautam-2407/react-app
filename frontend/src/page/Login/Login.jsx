@@ -14,7 +14,7 @@ function Login() {
     {
       const response = await phoneValidation(username);
       console.log(response);
-      if (response && response.exist){
+      if (response && response.exists){
         console.log("in for loop");
         console.log(response.username);
       }
