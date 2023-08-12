@@ -2,34 +2,34 @@ const users = require("../models/userSchema");
 
 exports.userregister = async (req, res) => {
       const { username, email, password } = req.body;
-
+    
       if (!username || !email || !password) {
-            res.status(400).json({ error: "Fill all Fields" });
+        res.status(400).json({ error: "Fill all Fields" });
       }
-
+    
       try {
-            const preuser = await users.findOne({ email: email });
-
-            if (preuser) {
-                  res.status(400).json({ error: "User already exist" });
-            } else {
-                  const userregister = new users({
-                        username,
-                        email,
-                        password,
-                  });
-
-                  const storeData = await userregister.save();
-                  res.status(201).json({ user: userregister });
-            }
+        const preuser = await users.findOne({ username: username});
+    
+        if (preuser) {
+          res.status(400).json({ error: "User already exist" });
+        } else {
+          const userregister = new users({
+            username,
+            email,
+            password,
+          });
+    
+          const storeData = await userregister.save();
+          res.status(200).json(storeData);
+        }
       } catch (error) {
-            res.status(400).json({ error: "Invalid Details", error });
+        res.status(400).json({ error: "Invalid Details", error });
       }
-};
+    };
 
 
 //CHECK PHONE INFORMATION IN DATABASE
-exports.userphone = async (req, res) => {
+exports.userlogin = async (req, res) => {
       const { username } = req.body;
 
       try {

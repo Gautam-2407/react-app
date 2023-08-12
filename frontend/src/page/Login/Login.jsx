@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { User, Fingerprint } from "lucide-react";
 import "./Login.css";
-import {login} from "../../services/apis"
+import {phoneValidation} from "../../services/apis"
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -12,9 +12,9 @@ function Login() {
     console.log("login started");
     try
     {
-      const response = await login(username);
+      const response = await phoneValidation(username);
       console.log(response);
-      if (response && response.exist){
+      if (response && response.exists){
         console.log("in for loop");
         console.log(response.username);
       }
