@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { User, Fingerprint } from "lucide-react";
 import "./Login.css";
 import {login} from "../../services/apis"
@@ -45,6 +45,7 @@ function Login() {
             // onChange={(e) => setPhone(e.target.value)}
             placeholder="Enter Your Username"
             required
+            value={username} onChange={(e) => setUsername(e.target.value)}
           />
           <User color="#3574F2" strokeWidth={1.5} />
         </div>
@@ -58,11 +59,12 @@ function Login() {
             // onChange={(e) => setPhone(e.target.value)}
             placeholder="Enter Your password"
             required
+            value={password} onChange={(e) => setPassword(e.target.value)}
           />
           <Fingerprint color="#3574F2" strokeWidth={1.5} />
         </div>
         <div className="login-button">
-          <input type="submit" value="Login" name="submit" className="my-form__button" />
+          <input type="submit" value="Login" name="submit" className="my-form__button" onClick={handelclick}/>
         </div>
       </form>
     </span>

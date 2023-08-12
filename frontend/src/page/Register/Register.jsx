@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import { User, Fingerprint, Mail } from "lucide-react";
+import { useNavigate } from "react-router";
 import "./register.css";
 import { registerfunction } from "../../services/apis"
 
@@ -24,104 +25,61 @@ function Register() {
     }
   }
   return (
-    <div className="main-register">
-      <div className="container-border">
-        <div class="container-register">
-          <h2>Registration Form</h2>
-          <form className="register-form-wrapper">
-            <div class="form-group">
-              <input type="text" id="username" name="username" placeholder="username" required value={username} onChange={(e) => setUsername(e.target.value)} />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="email"
-                required
-                value={email} onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="password"
-                required
-                value={password} onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Register" onClick={handleClick} />
-            </div>
-          </form>
-          <div className="login2">
-            Already Menber
-            <Link to="/">Login</Link>
-          </div>
+    <div className="container">
+    <span className="centering">
+      <form className="my-form">
+        <span className="login-welcome-row">
+          <h1>Login Form</h1>
+          <h4>Welcome to Login Form</h4>
+        </span>
+        <div className="text-field">
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            // value={phone}
+            // onChange={(e) => setPhone(e.target.value)}
+            placeholder="Enter Your Username"
+            required
+            value={username} onChange={(e) => setUsername(e.target.value)}
+          />
+          <User color="#3574F2" strokeWidth={1.5} />
         </div>
-      </div>
-    </div>
-
-    // <div className="container">
-    //     <span className="centering">
-    //       <form className="my-form">
-    //         <span className="login-welcome-row">
-
-    //           <h1>Profile</h1>
-    //         </span>
-    //         <div className="text-field">
-    //           <label htmlFor="username">Full Name</label>
-    //           <input
-    //             type="text"
-    //             id="username"
-    //             name="username"
-    //             value={username}
-    //             onChange={(e) => setUsername(e.target.value)}
-    //             placeholder="Enter Name"
-    //           />
-
-    //         </div>
-    //         <div className="text-field">
-    //           <label htmlFor="email">Email Address</label>
-    //           <input
-    //             type="email"
-    //             id="email"
-    //             name="email"
-    //             value={email}
-    //             onChange={(e) => setEmail(e.target.value)}
-    //             placeholder="Enter Email"
-    //             required
-    //           />
-
-    //         </div>
-    //         <div className="text-field">
-    //           <label htmlFor="password">Phone Number</label>
-    //           <input
-    //             type="password"
-    //             id="password"
-    //             name="password"
-    //             value={password}
-    //             onChange={(e) => setPassword(e.target.value)}
-    //             placeholder="Enter Phone Number"
-
-    //             required
-    //           />
-
-    //         </div>
-    //         <div className="Get_Otp">
-    //           <input
-    //             type="submit"
-    //             className="my-form__button"
-    //             value="Submit"
-    //             onClick={handleClick}
-    //           />
-    //         </div>
-
-    //       </form>
-    //     </span>
-    //   </div>
+        <div className="text-field">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            // value={phone}
+            // onChange={(e) => setPhone(e.target.value)}
+            placeholder="Enter Your email"
+            required
+            value={email} onChange={(e) => setEmail(e.target.value)}
+          />
+          <Mail color="#3574F2" />
+        </div>
+        <div className="text-field">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            // value={phone}
+            // onChange={(e) => setPhone(e.target.value)}
+            placeholder="Enter Your password"
+            required
+            value={password} onChange={(e) => setPassword(e.target.value)}
+          />
+          <Fingerprint color="#3574F2" strokeWidth={1.5} />
+        </div>
+        <div className="login-button">
+          <input type="submit" value="Login" name="submit" className="my-form__button"  onClick={handleClick} />
+        </div>
+      </form>
+    </span>
+  </div>
   );
 }
 
