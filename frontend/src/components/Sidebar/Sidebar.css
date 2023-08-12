@@ -1,5 +1,48 @@
-.sidebar-box{
-    height: 100vh;
-    width:240px;
-    border:1px solid black;
+.root{
+    --Secondary-text: #737784;
 }
+
+
+.sidebar-container{
+
+height:100vh;
+width:240px;
+border: 1px solid black;
+margin-left: 30px;
+
+}
+.top {
+      margin-top: 30px 30px;
+
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 75vh;
+    top: 2rem;
+}
+
+.sidebar-wrapper{
+    display: flex;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.2rem;
+   
+}
+.sidebar-wrapper > .page-links {
+    text-decoration:none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:var(--Secondary-text);
+}
+
+.sidebar-wrapper:last-child {
+    position: absolute;
+    bottom: 2rem;
+}
+
+
