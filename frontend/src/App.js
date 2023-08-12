@@ -4,6 +4,7 @@ import React from "react";
  import Login from "./page/Login/Login";
 import Dashboard from "./page/Dashboard/Dashboard";
 import Drawer from "./components/drawer/Drawer";
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css';
 

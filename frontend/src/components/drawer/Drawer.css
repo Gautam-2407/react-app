@@ -6,7 +6,9 @@
 }
 
 .drawer{
-    height: 100vh;
+    height: 98vh;
+    margin-top: -95px;
+    margin-left: 2px;
     width: 240px;
     border: 2px solid var(--main-color);
     border-radius: 10px;
@@ -19,7 +21,10 @@
 }
 .drawer-menu {
     margin: 0 2rem;
-    height: 80vh;
+    
+    display: flex;
+    flex-direction: column;
+    height: 68vh;
 }
 
 .drawer-menu > .drawer-links {

@@ -1,11 +1,12 @@
 .header-container{
     margin-top: 0px;
-    width:100%;
+    margin-left: 270px;
+    width:170vh;
     height: 100px;
     display:flex;
     justify-content: space-between;
     align-items: center;
-   background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .header-left{
