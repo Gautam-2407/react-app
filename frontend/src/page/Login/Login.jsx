@@ -22,12 +22,16 @@ function Login() {
         console.log("in for loop");
         toast.success("Login Succesfully");
         console.log(response.username);
-         navigate("/dashboard");
+         setTimeout(() => {
+          navigate("/dashboard");
+         }, 2000); 
       }
       else {
         console.log("not in for loop");
         toast.error("Invalid Username or Password");
-         window.location.replace("/");
+         setTimeout(()=>{
+          window.location.replace("/");
+         }, 2000)
 
       }
     }
