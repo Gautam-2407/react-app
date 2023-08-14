@@ -15,12 +15,11 @@ const close = (()=>{
 
 const Header = () => {
     return (
-
         <div className="main-container">
             <div className="header-container">
                 <div className="header-left">
                     <div className="logo">
-                        <Menu color="#3574F2" strokeWidth={1.5} />
+                        <Menu color="#3574F2" strokeWidth={1.5} onClick={close} />
                     </div>
                 </div>
                 <div className="header-right">

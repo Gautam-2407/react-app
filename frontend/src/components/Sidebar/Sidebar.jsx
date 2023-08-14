@@ -4,19 +4,23 @@ import "./Sidebar.css"
 import { LayoutDashboard, User, LogOut, Wallet } from "lucide-react"
 import { Link } from 'react-router-dom';
 
+
 function Drawer() {
-    const handlelogout = (()=>{
+    const handlelogout = (() => {
         window.location.replace("/");
     })
     return (
 
-        <div className="drawer">
+        <div className="drawer" id="sidebar">
             <div className="logo-wrapper">
                 <img src={logo} alt="logo" className='logo' />
+
+
             </div>
             <div className="drawer-menu">
 
                 {/* DASHBOARD LINK OPEN */}
+
                 <div className='drawer-links'>
                     <LayoutDashboard color="#3574F2" />
                     <Link to={"/dashboard"} className='text'> Dashboard</Link>
@@ -40,7 +44,7 @@ function Drawer() {
                 {/* LOGOUT LINK OPEN */}
                 <div className='drawer-links'>
                     <LogOut color="#3574F2" />
-                    <Link to={"/logout"} className='text'onClick={handlelogout}> Logout</Link>
+                    <Link to={"/logout"} className='text' onClick={handlelogout}> Logout</Link>
                 </div>
                 {/* LOGUOT LINK CLOSE */}
             </div>

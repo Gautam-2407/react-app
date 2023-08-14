@@ -7,7 +7,7 @@
 
 .drawer{
     height: 98vh;
-    margin-top: -95px;
+    margin-top: -95px; 
     margin-left: 2px;
     width: 240px;
     border: 2px solid var(--main-color);
