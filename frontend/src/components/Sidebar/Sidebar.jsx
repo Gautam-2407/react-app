@@ -11,8 +11,8 @@ function Drawer() {
     })
     return (
 
-        <div className="drawer" id="sidebar">
-            <div className="logo-wrapper">
+        <div className="drawer" id='border'>
+            <div className="logo-wrapper" id='logo'>
                 <img src={logo} alt="logo" className='logo' />
 
 
@@ -23,28 +23,28 @@ function Drawer() {
 
                 <div className='drawer-links'>
                     <LayoutDashboard color="#3574F2" />
-                    <Link to={"/dashboard"} className='text'> Dashboard</Link>
+                    <Link to={"/dashboard"} className='text' id='word'> Dashboard</Link>
                 </div>
                 {/* DASHBOARD LINK CLOSE */}
 
                 {/* PROFILE LINK OPEN */}
                 <div className='drawer-links'>
                     <User color="#3574F2" />
-                    <Link to={"/register"} className='text'> Proflie</Link>
+                    <Link to={"/register"} className='text' id='word'> Proflie</Link>
                 </div>
                 {/* PROFILE LINK CLOSE */}
 
                 {/* CHECKOUT LINK OPEN */}
                 <div className='drawer-links'>
                     <Wallet color="#3574F2" />
-                    <Link to={"/checkout"} className='text'> Checkout</Link>
+                    <Link to={"/checkout"} className='text' id='word'> Checkout</Link>
                 </div>
                 {/* CHECKOUT LINK CLOSE */}
 
                 {/* LOGOUT LINK OPEN */}
                 <div className='drawer-links'>
                     <LogOut color="#3574F2" />
-                    <Link to={"/logout"} className='text' onClick={handlelogout}> Logout</Link>
+                    <Link to={"/logout"} className='text' id="word" onClick={handlelogout}> Logout</Link>
                 </div>
                 {/* LOGUOT LINK CLOSE */}
             </div>
