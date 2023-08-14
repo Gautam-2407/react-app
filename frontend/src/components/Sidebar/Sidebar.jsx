@@ -1,53 +1,54 @@
 import React from 'react';
-import "./Sidebar.css";
-import logo from "../assets/images/logo.png";
-import { LayoutDashboard, User, Wallet, LogOut } from "lucide-react";
+import logo from "../assets/images/rd-1.png"
+import "./Sidebar.css"
+import { LayoutDashboard, User, LogOut, Wallet } from "lucide-react"
 import { Link } from 'react-router-dom';
-const Sidebar = () => {
 
-    const handlelogout= () =>{
+function Drawer() {
+    const handlelogout = (()=>{
         window.location.replace("/");
-    }
-
+    })
     return (
 
-        <div className="sidebar-container">
-            <div className="top">
-                <img src={logo} alt="logo"  classname="logo"/>
+        <div className="drawer">
+            <div className="logo-wrapper">
+                <img src={logo} alt="logo" className='logo' />
             </div>
-            <div className="sidebar-menu">
-                {/* Dashboard link Open */}
-                <div className="sidebar-wrapper">
-                    <LayoutDashboard color="#3574F2" strokeWidth={1.5} />
-                    <Link to={"/dashboard"} className='page-links'>Dashboard</Link>
-                </div>
-                {/* Dashboard link Closed */}
+            <div className="drawer-menu">
 
-                {/* User link Open */}
-                <div className="sidebar-wrapper">
-                    <User color="#3574F2" strokeWidth={1.5} />
-                    <Link to={"/register"} className='page-links'>Profile</Link>
+                {/* DASHBOARD LINK OPEN */}
+                <div className='drawer-links'>
+                    <LayoutDashboard color="#3574F2" />
+                    <Link to={"/dashboard"} className='text'> Dashboard</Link>
                 </div>
-                {/* User link Closed */}
-               
-               {/* Checkout link is open */}
-                <div className="sidebar-wrapper">
-                    <Wallet color="#3574F2" strokeWidth={1.5} />
-                    <Link to={"/checkout"} className='page-links' >Checkout</Link>
-                </div>
-                {/* Checkout link is closed */}
+                {/* DASHBOARD LINK CLOSE */}
 
-                {/* Logout link is open */}
-                <div className="sidebar-wrapper">
-                    <LogOut color="#3574F2" strokeWidth={1.5} />
-                    <Link to={""} className='page-links' onClick={handlelogout} >Logout</Link>
+                {/* PROFILE LINK OPEN */}
+                <div className='drawer-links'>
+                    <User color="#3574F2" />
+                    <Link to={"/register"} className='text'> Proflie</Link>
                 </div>
-                {/* Logout link is closed */}
+                {/* PROFILE LINK CLOSE */}
 
+                {/* CHECKOUT LINK OPEN */}
+                <div className='drawer-links'>
+                    <Wallet color="#3574F2" />
+                    <Link to={"/checkout"} className='text'> Checkout</Link>
+                </div>
+                {/* CHECKOUT LINK CLOSE */}
+
+                {/* LOGOUT LINK OPEN */}
+                <div className='drawer-links'>
+                    <LogOut color="#3574F2" />
+                    <Link to={"/logout"} className='text'onClick={handlelogout}> Logout</Link>
+                </div>
+                {/* LOGUOT LINK CLOSE */}
             </div>
+
         </div>
 
-    );
+
+    )
 }
 
-export default Sidebar;
+export default Drawer

@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from "../../components/header/Header";
 
-import Drawer from '../../components/drawer/Drawer';
+import Sidebar from '../../components/Sidebar/Sidebar';
+
 
 function Dashboard() {
   return (
     <div>
       <Header />
-      <Drawer />
+      <Sidebar />
     </div>
   )
 }
