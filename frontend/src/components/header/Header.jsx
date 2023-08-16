@@ -5,45 +5,27 @@ import userimage from '../assets/images/user-2.jpg';
 
 
 const close = (()=>{
-// var x = document.querySelectorAll("word");
- 
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-
-  const div=document.querySelectorAll("#word");
+ const div=document.querySelectorAll("#word");
 
 for(let i=0;i<div.length;i++){
  const styles = window.getComputedStyle(div[i]);
     
     if(styles.visibility ==='visible'){
     div[i].style.visibility='hidden';
-    document.getElementById('logo').style.visibility = 'hidden';
+    document.getElementById('logo').style.visibility = 'hidden' ;
     document.getElementById('border').style.cssText = "width:90px; transition: all 1s;";
 
     }else{
-    div[i].style.visibility='visible';
-    document.getElementById('logo').style.visibility = 'visible';
+    setTimeout(()=>{
+    div[i].style.visibility='visible';}, 350);
+    setTimeout(()=>{
+    document.getElementById('logo').style.cssText="visibility :visible;";
+    }, 400)
     document.getElementById('border').style.width = '240px';
     }
 
 
   }
-// const elements = document.querySelectorAll('.hidden');
-
-// toggleButton.addEventListener('click', function() {
-//     // Loop through each hidden element and toggle its visibility
-//     elements.forEach(element => {
-//         if (element.style.display === 'none') {
-//             element.style.display = 'block'; // Show the element
-//         } else {
-//             element.style.display = 'none';  // Hide the element
-//         }
-//     });
-// });
-
 })
 
 const Header = () => {
