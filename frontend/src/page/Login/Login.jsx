@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { User, Fingerprint } from "lucide-react";
 import "./Login.css";
 import { phoneValidation } from "../../services/apis"
- import { useNavigate } from "react-router-dom";
+ import {  useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 
@@ -19,16 +19,21 @@ function Login() {
       const response = await phoneValidation(username);
       console.log(response);
       if (response && response.exists) {
+        
         console.log("in for loop");
         toast.success("Login Succesfully");
         console.log(response.username);
-         navigate("/dashboard");
+         navigate("dashboard");
+        
+         
       }
       else {
         console.log("not in for loop");
         toast.error("Invalid Username or Password");
-         window.location.replace("/");
-
+        
+        setTimeout(() => {
+          window.location.replace("/");
+        }, 5000);
       }
     }
     catch (error) {
@@ -79,6 +84,7 @@ function Login() {
           </form>
         </span>
       </div>
+      
     </>
   );
 }

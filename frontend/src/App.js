@@ -16,10 +16,14 @@ function App() {
     <div className="App">
       
       <Routes>
-        <Route path="/" Component={Login} />
-        <Route path="/register" Component={Register} />
-        <Route path="/dashboard" Component={Dashboard} />
-        <Route path="/sidebar" Component={Sidebar} />
+        <Route path="register" Component={Register} />
+        <Route path="sidebar" Component={Sidebar} />
+        <Route path="/" Component={Login}>
+
+        </Route>
+        <Route path="dashboard" Component={  <ProtectedRoute user={user}>
+              <Dashboard />
+            </ProtectedRoute>} />
       </Routes>
              
             

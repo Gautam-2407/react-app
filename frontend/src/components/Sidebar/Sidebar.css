@@ -15,7 +15,9 @@
     box-shadow: 15px 10px var(--shadow-color);
     
 }
-
+/* #border{
+    transition: all 1s;
+} */
 .logo-wrapper {
     margin: 2rem 0;
     text-align: center;
@@ -52,7 +54,7 @@
 
 }
 @media (max-width: 768px) {
-    .drawer {
+    #border {
        visibility: hidden;
     }
   }
