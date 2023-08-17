@@ -13,7 +13,7 @@ function Drawer() {
 
         <div className="drawer" id='border'>
             <div className="logo-wrapper" id='logo'>
-                <img src={logo} alt="logo" className='logo' />
+                <img src={logo} alt="logo" className='logo2' />
 
 
             </div>

@@ -28,3 +28,8 @@
     margin-left: 70px;
     
 }
+@media (min-width: 768px) {
+    .logo {
+       display: none;
+    }
+  }
