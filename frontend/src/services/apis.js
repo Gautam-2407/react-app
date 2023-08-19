@@ -11,9 +11,9 @@ export const registerfunction = async(username, email, password) => {
     }
 }
 
-export const phoneValidation = async(username) => {
+export const phoneValidation = async(username,password) => {
     try {
-        const response = await commonrequest("POST", `${backend_url}/user/login`, {username: username});
+        const response = await commonrequest("POST", `${backend_url}/user/login`, {username: username, password: password});
         return response.data;
     }
     catch(error) {

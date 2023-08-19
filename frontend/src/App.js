@@ -6,6 +6,8 @@ import Dashboard from "./page/Dashboard/Dashboard";
 import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from "../src/components/Sidebar/Sidebar"
 import './App.css';
+import Protected from "./components/Protected/Protected";
+
 
 
 
@@ -18,13 +20,16 @@ function App() {
       <Routes>
         <Route path="register" Component={Register} />
         <Route path="sidebar" Component={Sidebar} />
-        <Route path="/" Component={Login}>
+        <Route path="/" Component={Login} />
+        
+        <Route element={<Protected />}>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
 
         </Route>
-        <Route path="dashboard" Component={  <ProtectedRoute user={user}>
-              <Dashboard />
-            </ProtectedRoute>} />
-      </Routes>
+        {/* <Route path="dashboard" element={<Protected Component={Dashboard} />} /> */}
+
+        </Routes>
+       
              
             
 
