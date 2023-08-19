@@ -23,6 +23,9 @@ function Login() {
         console.log("in for loop");
         toast.success("Login Succesfully");
         console.log(response.username);
+         const {token} = response;
+         sessionStorage.setItem("auth_key", token);
+
           // navigate("dashboard");
         
          
