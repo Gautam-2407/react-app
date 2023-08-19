@@ -24,9 +24,9 @@ function Login() {
         toast.success("Login Succesfully");
         console.log(response.username);
          const {token} = response;
-         sessionStorage.setItem("auth_key", token);
+         sessionStorage.setItem("auth_token", token);
 
-          // navigate("dashboard");
+          navigate("/dashboard");
         
          
       }

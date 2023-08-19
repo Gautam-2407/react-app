@@ -1,38 +1,47 @@
 import React from "react";
- import {Routes, Route } from "react-router-dom";
- import Register from "./page/Register/Register";
- import Login from "./page/Login/Login";
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./page/Login/Login";
 import Dashboard from "./page/Dashboard/Dashboard";
 import 'react-toastify/dist/ReactToastify.css';
-import Sidebar from "../src/components/Sidebar/Sidebar"
+
 import './App.css';
-import Protected from "./components/Protected/Protected";
+import Private from "./page/Private/Private";
+
 
 
 
 
 function App() {
+  
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("auth_token");
+    window.location.replace("/");
+  };
+
+
   return (
-    
+    <div className="New_App">
 
-    <div className="App">
-      
-      <Routes>
-        <Route path="register" Component={Register} />
-        <Route path="sidebar" Component={Sidebar} />
-        <Route path="/" Component={Login} />
+           <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<Login onLogout={handleLogout} />} />
+          {/* Private Routes */}
+          <Route
+            path="/dashboard"
+            element={<Private onLogout={handleLogout} />}
+          >
+            <Route index element={<Dashboard />} />
+          </Route>
+
+
+
+
+
+
         
-        <Route element={<Protected />}>
-          <Route path="/dashboard" element={<Dashboard />}></Route>
-
-        </Route>
-        {/* <Route path="dashboard" element={<Protected Component={Dashboard} />} /> */}
-
         </Routes>
-       
-             
-            
-
     
     </div>
   );
