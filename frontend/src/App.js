@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./page/Login/Login";
 import Dashboard from "./page/Dashboard/Dashboard";
 import 'react-toastify/dist/ReactToastify.css';
-
+import Register from "./page/Register/Register";
 import './App.css';
 import Private from "./page/Private/Private";
 
@@ -33,7 +33,9 @@ function App() {
             element={<Private onLogout={handleLogout} />}
           >
             <Route index element={<Dashboard />} />
+
           </Route>
+          <Route path="/register" element={<Register />} />
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../assets/images/rd-1.png"
 import "./Sidebar.css"
-import { LayoutDashboard, User, LogOut, Wallet, Sidebar } from "lucide-react"
+import { LayoutDashboard, User, LogOut, Wallet} from "lucide-react"
 import { Link } from 'react-router-dom';
 
 
