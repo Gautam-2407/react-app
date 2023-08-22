@@ -23,6 +23,24 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+
+
+
+userSchema.pre('save',  async function (next) {
+    if(!this.isModified){
+        return next();
+    }
+    try{(this.isModified)
+    const salt = await bcrypt.genSalt(10);
+    const hashing = await bcrypt.hashing(this.password, salt);
+
+    this.password = hashing;
+    next();}
+    catch{(err)}
+}) 
+  
+
+
 //CREATING MODEL
 const users = new mongoose.model("users",userSchema);
 
