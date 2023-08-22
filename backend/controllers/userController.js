@@ -33,11 +33,11 @@ exports.userlogin = async (req, res) => {
       const { username } = req.body;
 
       try {
-            const user = await users.findOne({ username: username });
+            const user = await users.findout({ username: username });
 
             if (user) {
                   res.status(201).json({ exists: true, username: user.username });
-
+                  const user = await bcrypt.compare(password, user.password);
             } else {
                   res.status(200).json({ exists: false });
             }
