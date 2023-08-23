@@ -31,14 +31,14 @@ userSchema.pre('save',  async function (next) {
         return next();
     try{
     const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hashing(this.password, salt);
+    const hash = await bcrypt.hash(this.password, salt);
     this.password = hash;
     next();
 }
     catch(err){
         next(err);
     }
-}) 
+}); 
 
 
 
