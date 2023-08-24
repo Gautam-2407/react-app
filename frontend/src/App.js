@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Login from "./page/Login/Login";
 import Dashboard from "./page/Dashboard/Dashboard";
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,14 +36,14 @@ function App() {
           </Route>
           <Route path="/register" element={<Register />} />
 
-
+          
 
 
 
 
         
         </Routes>
-    
+       
     </div>
   );
 }

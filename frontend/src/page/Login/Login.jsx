@@ -19,13 +19,13 @@ function Login() {
       const response = await phoneValidation(username, password);
       console.log(response);
       if (response && response.exists) {
+        sessionStorage.setItem("user", response.token);
         
         console.log("in for loop");
         toast.success("Login Succesfully");
         console.log(response.username);
          const {token} = response;
-         sessionStorage.setItem("auth_token", token);
-
+        //  sessionStorage.setItem("auth_token", token);
           navigate("/dashboard");
         
          
@@ -59,8 +59,8 @@ function Login() {
                 type="text"
                 id="username"
                 name="username"
-                // value={phone}
-                // onChange={(e) => setPhone(e.target.value)}
+                //  value={phone}
+                //  onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter Your Username"
                 required
                 value={username} onChange={(e) => setUsername(e.target.value)}
@@ -73,8 +73,8 @@ function Login() {
                 type="password"
                 id="password"
                 name="password"
-                // value={phone}
-                // onChange={(e) => setPhone(e.target.value)}
+                //  value={phone}
+                //  onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter Your password"
                 required
                 value={password} onChange={(e) => setPassword(e.target.value)}

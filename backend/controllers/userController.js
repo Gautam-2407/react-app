@@ -47,7 +47,7 @@ exports.userlogin = async (req, res) => {
       
 
       console.log("Valid");
-      const login_token = jwt.sign({username: user.username, id: user._id},
+      const login_token = jwt.sign({username: user.username,},
         SecretKey);
         res.status(201).json({ exists: true, username: user.username, token:login_token});
 
