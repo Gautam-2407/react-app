@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -8,12 +9,6 @@ const userSchema = new mongoose.Schema({
     },
     email:{
         type: String,
-        unique: true,
-        validator(value){
-            if(!validator.isEmail(value)){
-                throw new Error("Not valid Email")
-            }
-        },
         required: true,
     },
     password:{
@@ -26,19 +21,21 @@ const userSchema = new mongoose.Schema({
 
 
 
-userSchema.pre('save',  async function (next) {
-    if(!this.isModified("password"))
-        return next();
-    try{
-    const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(this.password, salt);
-    this.password = hash;
-    next();
-}
-    catch(err){
-        next(err);
-    }
-}); 
+userSchema.pre('save', async function (next) {
+
+    if (!this.isModified("password")) 
+            return next();
+      
+     try{
+          const salt = await bcrypt.genSalt(12);
+          const hash = await bcrypt.hash(this.password, salt);
+          this.password = hash;
+          next();
+      }
+      catch(err){
+          next(err);
+        }
+    });
 
 
 

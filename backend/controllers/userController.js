@@ -1,4 +1,6 @@
-const users = require("../models/userSchema");
+const users = require('../models/userSchema');
+const jwt = require('jsonwebtoken');
+const secretkey = 'NoAPI';
 
 exports.userregister = async (req, res) => {
       const { username, email, password } = req.body;
@@ -20,6 +22,7 @@ exports.userregister = async (req, res) => {
           });
     
           const storeData = await userregister.save();
+          
           res.status(200).json(storeData);
         }
       } catch (error) {
@@ -33,13 +36,15 @@ exports.userlogin = async (req, res) => {
       const { username } = req.body;
 
       try {
-            const user = await users.findout({ username: username });
-
+            const user = await users.findOne({ username: username });
+             console.log("user");
             if (user) {
-                  res.status(201).json({ exists: true, username: user.username });
-                  const user = await bcrypt.compare(password, user.password);
+              const token = jwt.sign( {username: user.username}, secretkey );
+                 return res.status(201).json({ exists: true, username: user.username,  token });
+                   
+
             } else {
-                  res.status(200).json({ exists: false });
+                return res.status(200).json({ exists: false });
             }
 
       } catch (error) {

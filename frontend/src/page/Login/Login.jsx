@@ -18,6 +18,7 @@ function Login() {
     try {
       const response = await phoneValidation(username);
       console.log(response);
+     
       if (response && response.exists) {
         console.log("in for loop");
         toast.success("Login Succesfully");

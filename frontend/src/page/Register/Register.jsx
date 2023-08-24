@@ -18,7 +18,7 @@ function Register() {
       const response = await registerfunction(username, email, password);
 
       console.log(response);
-      navigate("/")
+      navigate("/Register");
     }
     catch (error) {
       console.log(error);
