@@ -4,10 +4,9 @@ import React from "react";
  import Login from "./page/Login/Login";
 import Dashboard from "./page/Dashboard/Dashboard";
 import Drawer from "./components/drawer/Drawer";
-
 import Test from "./Test";import 'react-toastify/dist/ReactToastify.css';
-
 import './App.css';
+import Test2 from "./Test2";
 
 
 function App() {
@@ -22,6 +21,7 @@ function App() {
         <Route path="/dashboard" Component={Dashboard} />
         <Route path="/drawer" Component={Drawer}/>
         <Route path="/Test" Component={Test} />
+        <Route path="/Test2" Component={Test2} />
       </Routes>
              
             
